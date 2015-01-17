@@ -13,9 +13,9 @@ class Robot: public SampleRobot
 
     const static int joystickChannel	= 0;
     
-        int joystickX=0;
-	int joystickY=0;
-	int joystickZ=0;
+        int joystickX = 0;
+	int joystickY = 0;
+	int joystickZ = 0;
 
 	RobotDrive robotDrive;	// robot drive system
 	Joystick stick;			// only joystick
@@ -39,26 +39,20 @@ void OperatorControl()
         	// Use the joystick X axis for lateral movement, Y axis for forward movement, and Z axis for rotation.
         	// Setting variables/thresholds
 			
-			jostickX=stick.GetX();
-			jostickY=stick.GetY();
-			jostickZ=stick.GetZ();
+			jostickX = stick.GetX();
+			jostickY = stick.GetY();
+			jostickZ = stick.GetZ();
 			
 			if joystickX <= 10 || joystickX >= -10{
-			
 				joystickX=0
-			
 			}
 			
 			if joystickY <= 10 || joystickY >= -10{
-			
 				joystickY=0
-			
 			}
 			
 			if joystickZ <= 10 || joystickZ >= -10{
-			
 				joystickZ=0
-			
 			}
 			
 			robotDrive.MecanumDrive_Cartesian(joystickX, joystickY, joystickZ);
