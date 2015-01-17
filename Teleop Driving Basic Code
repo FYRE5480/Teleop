@@ -44,19 +44,19 @@ void OperatorControl()
 			
 			if joystickX <= 10{
 			
-	     joystickX=0
+				joystickX=0
 			
 			}
 			
 			if joystickY <= 10{
 			
-	     joystickY=0
+				joystickY=0
 			
 			}
 			
 			if joystickZ <= 10{
 			
-	     joystickZ=0
+				joystickZ=0
 			
 			}
 			
